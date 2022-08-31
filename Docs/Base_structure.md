@@ -15,20 +15,21 @@ Let's look at how the core components are structured in a minimal WDL script tha
 version 1.0
 workflow myWorkflowName {
   input {
-    String workflow_input
+    File my_ref
+    File my_input
+    String name
   }
   call task_A {
     input: 
-      task_A_input = workflow_input
+      ref = my_ref,
+      in = my_input,
+      id = name     
   }
   call task_B {
     input: 
-      task_B_input = task_A.out
+      ref = my_ref,
+      in = task_A.out
   }
-  output {
-    File final_output = task_B.out
-  }
-}
 
 task Task_A {...}
 task Task_B {...}
@@ -114,16 +115,18 @@ If we look inside a task definition, we find its core components: the command th
 ```wdl
 task Task_A {
   input {
-    String Task_A_input
+    File ref
+    File in
+    String id
   }
   command <<<
-    do_stuff -R ~{Task_A_input}!'
+    do_stuff -R ~{ref} -I ~{in} -O ~{id}.ext
   >>>
-  output {
-    File output_file = stdout()
-  }
   runtime {
-    docker: 'ubuntu:latest'
+    docker: "ubuntu:latest"
+  }
+  output {
+    File out = "~{id}.ext"
   }
 }
 ```
