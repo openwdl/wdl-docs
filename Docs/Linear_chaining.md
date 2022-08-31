@@ -1,46 +1,88 @@
 # Linear chaining
-This documentation is in the process of being updated. In the meantime, you may find that some GATK commands are out of date, or that the WDL information is incomplete. If you encounter any issues you can't solve, please let us know.
+The simplest way to chain tasks together in a workflow is a **linear chain**, where we feed the output of one task to the input of the next, as shown in the diagram below.
 
-The simplest way to chain tasks together in a workflow is a linear chain, where we feed the output of one task to the input of the next, like so:
+![diagram of linear chaining. Input goes through stepA and generates output which is then used as input in stepB, which generates output that is used as input in StepC](./images/linear_chaining.png)
 
-This is easy to do because WDL allows us to refer to the output of any task (declared appropriately in the task's output block) within the call statement of another task (and indeed, anywhere else in the workflow block), using the syntax task_name.output_variable. So here, we simply specify in the call to stepB that we want it to use stepA.out as the value of the input variable in, and it's the same rule for stepC.
+This is easy to do because WDL allows us to refer to the output of any task (declared appropriately in the task's `output` block) within the `call` statement of another task (and indeed, anywhere else in the `workflow` block), using the syntax `task_name.output_variable`. 
 
-  call stepB { input: in=stepA.out }
-  call stepC { input: in=stepB.out }
+Using the diagram as an example, we can specify in the call to `stepB` that we want it to use `stepA.out` as the value of the input variable, which we'll define as `in`.  It's the same rule for `stepC`.
 
+To write this in a WDL script, we'd use the following code:
 
-This relies on a principle called hierarchical naming that allows us to identify components by their parentage.
+```wdl
+  call stepB { 
+    input: 
+      in = stepA.out
+    }
+  call stepC {
+    input: 
+      in = stepB.out
+    }
+```
 
-Generic example script
+This relies on a principle called "hierarchical naming" that allows us to identify components by their parentage.
+
+## Generic example script
 
 To put this in context, here is what the code for the workflow illustrated above would look like in full:
 
+```wdl
 workflow LinearChain {
-  File firstInput
-  call stepA { input: in=firstInput }
-  call stepB { input: in=stepA.out }
-  call stepC { input: in=stepB.out }
+  input {
+    File firstInput
+  }
+  call stepA { 
+    input: 
+      in = firstInput
+  }
+  call stepB {
+   input:
+     in = stepA.out
+  }
+  call stepC { 
+    input: 
+      in = stepB.out
+  }
 }
 
 task stepA {
-  File in
-  command { programA I=${in} O=outputA.ext }
-  output { File out = "outputA.ext" }
+  input {
+    File in
+  }
+  command <<<
+    programA I=~{in} O=outputA.ext
+  >>>
+  output { 
+    File out = "outputA.ext"
+  }
 }
 
 task stepB {
-  File in
-  command { programB I=${in} O=outputB.ext }
-  output { File out = "outputB.ext" }
+  input {
+    File in
+  }
+  command <<<
+    programB I=${in} O=outputB.ext
+  >>>
+  output { 
+    File out = "outputB.ext"
+  }
 }
 
 task stepC {
-  File in
-  command { programC I=${in} O=outputC.ext }
-  output { File out = "outputC.ext" }
+  input {
+    File in
+  }
+  command <<<
+   programC I=${in} O=outputC.ext
+  >>>
+  output { 
+    File out = "outputC.ext" 
+  }
 }
+```
 
-Concrete example
+## Concrete example
 
 Let’s look at a concrete example of linear chaining in a workflow designed to pre-process some DNA sequencing data (MarkDuplicates), perform an analysis on the pre-processed data (HaplotypeCaller), then subset the results of the analysis (SelectVariants).
 
