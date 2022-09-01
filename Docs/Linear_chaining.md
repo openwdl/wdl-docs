@@ -86,28 +86,44 @@ task stepC {
 
 Let’s look at a concrete example of linear chaining in a workflow designed to pre-process some DNA sequencing data (MarkDuplicates), perform an analysis on the pre-processed data (HaplotypeCaller), then subset the results of the analysis (SelectVariants).
 
+![GATK_linear_chaining.png](./images/GATK_linear_chaining.png)
+
 The workflow involves three tasks:
 
-MarkDuplicates takes in a File bamFile and produces a File metrics and a File dedupBAM.
-HaplotypeCaller takes in a File bamFile and produces a File rawVCF.
-SelectVariants takes in a File VCF and a String type to specify whether to select INDELs or SNPs. It produces a File subsetVCF, containing only variants of the specified type.
-Concrete example script
+* MarkDuplicates takes in a `File bamFile` and produces a `File metrics` and a `File dedupBAM`.
+* HaplotypeCaller takes in a `File bamFile` and produces a `File rawVCF`.
+* SelectVariants takes in a `File VCF` and a `String type` to specify whether to select INDELs or SNPs. It produces a `File subsetVCF`, containing only variants of the specified type.
+
+### Concrete example script
 
 This is what the code for the workflow illustrated above would look like:
-
+```wdl
 workflow LinearChainExample {
-  File originalBAM
-  call MarkDuplicates { input: bamFile=originalBAM }
-  call HaplotypeCaller { input: bamFile=MarkDuplicates.dedupBam }
-  call SelectVariants { input: VCF=HaplotypeCaller.rawVCF, type="INDEL" }
+  input {
+    File originalBAM
+  }
+  call MarkDuplicates { 
+    input: 
+      bamFile = originalBAM 
+  }
+  call HaplotypeCaller { 
+    input: 
+      bamFile = MarkDuplicates.dedupBam 
+  }
+  call SelectVariants { 
+    input: 
+      VCF = HaplotypeCaller.rawVCF, type="INDEL" 
+  }
 }
 
 task MarkDuplicates {
-  File bamFile
-  command {
-    java -jar picard.jar MarkDuplicates \
-    I=${bamFile} O=dedupped.bam M= dedupped.metrics
+  input {
+    File bamFile
   }
+  command <<<
+    java -jar picard.jar MarkDuplicates \
+    I=~{bamFile} O=dedupped.bam M= dedupped.metrics
+  >>>
   output {
     File dedupBam = "dedupped.bam"
     File metrics = "dedupped.metrics"
@@ -115,34 +131,38 @@ task MarkDuplicates {
 }
 
 task HaplotypeCaller {
-  File bamFile
-  command {
+  input {
+    File bamFile
+  }
+  command <<<
     java -jar GenomeAnalysisTK.jar \
       -T HaplotypeCaller \
       -R reference.fasta \
-      -I ${bamFile} \
+      -I ~{bamFile} \
       -o rawVariants.vcf
-  }
+  >>>
   output {
     File rawVCF = "rawVariants.vcf"
   }
 }
 
 task SelectVariants {
-  File VCF
-  String type
-  command {
+  input {
+    File VCF
+    String type
+  }
+  command <<<
     java -jar GenomeAnalysisTK.jar \
       -T SelectVariants \
       -R reference.fasta \
-      -V ${VCF} \
-      --variantType ${type} \
+      -V ~{VCF} \
+      --variantType ~{type} \
       -o rawIndels.vcf
-  }
+  >>>
   output {
     File subsetVCF = "rawIndels.vcf"
   }
 }
+```
 
-
-Note that here for simplicity we omitted the handling of index files, which has to be done explicitly in WDL. For examples of how to do that, see the Tutorials.
+*Note that here for simplicity we omitted the handling of index files, which has to be done explicitly in WDL. 
