@@ -1,7 +1,7 @@
 # Linear chaining
 The simplest way to chain tasks together in a workflow is a **linear chain**, where we feed the output of one task to the input of the next, as shown in the diagram below.
 
-![diagram of linear chaining. Input goes through stepA and generates output which is then used as input in stepB, which generates output that is used as input in StepC](./images/linear_chaining.png)
+![diagram of linear chaining. Input goes through stepA and generates an output which is then used as input in stepB, which generates output that is used as input in StepC](../Images/linear_chaining.png)
 
 This is easy to do because WDL allows us to refer to the output of any task (declared appropriately in the task's `output` block) within the `call` statement of another task (and indeed, anywhere else in the `workflow` block), using the syntax `task_name.output_variable`. 
 
@@ -86,7 +86,7 @@ task stepC {
 
 Let’s look at a concrete example of linear chaining in a workflow designed to pre-process some DNA sequencing data (MarkDuplicates), perform an analysis on the pre-processed data (HaplotypeCaller), then subset the results of the analysis (SelectVariants).
 
-![GATK_linear_chaining.png](./images/GATK_linear_chaining.png)
+![an image depicting how a BAM file is used as input to the MarkDuplicate software tool, which produces a metrics file and a deduplicated BAM, which is then used as input to HaplotypeCaller. This produces a raw VCF which is used as an input along with a variable "type" to the SelectVariants tool, producing a subsetted VCF.](../Images/GATK_linear_chaining.png)
 
 The workflow involves three tasks:
 
@@ -166,4 +166,5 @@ task SelectVariants {
 }
 ```
 
-*Note that here for simplicity we omitted the handling of index files, which has to be done explicitly in WDL. 
+*Note that here for simplicity we omitted the handling of index files, which has to be done explicitly in WDL.* 
+
