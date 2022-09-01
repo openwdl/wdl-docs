@@ -21,7 +21,7 @@ This will run your workflow. You will see text from the Cromwell engine updating
 *Note that any messages that are normally output to the terminal by the tools themselves will not actually be shown in the terminal where you're running the script. Instead, Cromwell saves this output in a log file called `stderr` located within the execution folder.*
 
 By default, you can find all generated files (outputs and logs) in this folder:
-![a diagram of the path to different files in the cromwell execution directory. The example is "/Users/johnsmith/cromwell-executions/My-Workflows/\<run-id>/call-helloWorld"](./images/execution_directory.png).
+![a diagram of the path to different files in the cromwell execution directory. The example is "/Users/johnsmith/cromwell-executions/My-Workflows/\<run-id>/call-helloWorld"](../Images/execution_directory.png).
 
 ## Running on other platforms
 
