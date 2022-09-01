@@ -62,7 +62,7 @@ task stepB {
     File in
   }
   command <<<
-    programB I=${in} O=outputB.ext
+    programB I=~{in} O=outputB.ext
   >>>
   output { 
     File out = "outputB.ext"
@@ -74,7 +74,7 @@ task stepC {
     File in
   }
   command <<<
-   programC I=${in} O=outputC.ext
+   programC I=~{in} O=outputC.ext
   >>>
   output { 
     File out = "outputC.ext" 
@@ -112,7 +112,8 @@ workflow LinearChainExample {
   }
   call SelectVariants { 
     input: 
-      VCF = HaplotypeCaller.rawVCF, type="INDEL" 
+      VCF = HaplotypeCaller.rawVCF, 
+      type="INDEL" 
   }
 }
 
