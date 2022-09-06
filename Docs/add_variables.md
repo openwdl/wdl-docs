@@ -6,9 +6,28 @@ So let's look at how to include variables in our WDL script (we'll talk later ab
 
 ## Adding task-level variables
 
-<img align="left" src="../Images/wdl-task.png" alt="Diagram showing the structure of a task in WDL, which includes input, command, runtime, and output blocks." width="400">
+Let's look at what an example task, `task_A`, actually contains in its `command` and `output` component blocks. 
 
-Let's look at what an example task, `task_A`, actually contains in its `command` and `output` component blocks. We made up an imaginary program called `do_stuff` which presumably does something more interesting than printing "Hello World". This program requires two files to be provided with the arguments `-R` and `-I`, respectively, and produces an output file that must be named using the argument `-O`. 
+```wdl
+task Task_A {
+  input {
+    File ref
+    File in
+    String id
+  }
+  command <<<
+    do_stuff -R ~{ref} -I ~{in} -O ~{id}.ext
+  >>>
+  runtime {
+    docker: "ubuntu:latest"
+  }
+  output {
+    File out = "~{id}.ext"
+  }
+}
+```
+
+We made up an imaginary program called `do_stuff` which presumably does something more interesting than printing "Hello World". This program requires two files to be provided with the arguments `-R` and `-I`, respectively, and produces an output file that must be named using the argument `-O`. 
 
 If we were to hardcode the values, we could just write the command line as we would run it in the terminal:
 
@@ -26,9 +45,33 @@ Finally, we identify any arguments of the `command` that we want to track as pro
 
 ## Adding workflow-level variables
 
-<img align="left" src="../Images/wdl-workflow.png" alt="Diagram showing the structure of a workflow in WDL, which includes input blocks and calls tasks." width="400">
+You've seen how variables are declared in tasks, but what about workflows?
 
-Moving one level out to the body of the workflow, you see that we have also *declared* a set of variables at the top. These declarations follow essentially the same rules as those inside a task. All we need to do now is connect these two levels so that arguments passed to the workflow can be used as inputs to the task.
+```wdl
+version 1.0
+workflow myWorkflowName {
+  input {
+    File my_ref
+    File my_input
+    String name
+  }
+  call task_A {
+    input: 
+      ref = my_ref,
+      in = my_input,
+      id = name     
+  }
+  call task_B {
+    input: 
+      ref = my_ref,
+      in = task_A.out
+  }
+
+task Task_A {...}
+task Task_B {...}
+```
+
+Moving one level out to the body of the workflow, you see that we've *declared* a set of variables at the top. These declarations follow essentially the same rules as those inside a task. All we need to do now is connect these two levels so that arguments passed to the workflow can be used as inputs to the task.
 
 To do so, we simply add those variables to the `call` function. This block simply contains an `input:` line, followed by additional lines that enumerate which workflow-level variables connect to which task-level variables.
 
