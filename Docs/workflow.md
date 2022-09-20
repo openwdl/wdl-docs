@@ -7,6 +7,6 @@ There are various options for chaining tasks together using `call` and other sta
 ## Usage example
 ```wdl
 workflow myWorkflowName {
-    call task_A {...}
+    call task_A
 }
 ```
