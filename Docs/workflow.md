@@ -4,7 +4,7 @@ The `workflow` component is a required top-level component of a WDL script. It c
 
 There are various options for chaining tasks together using `call` and other statements. For more information, see [Add plumbing](add_plumbing.md).
 
-## Usage example
+## Example:
 ```wdl
 workflow myWorkflowName {
     call task_A

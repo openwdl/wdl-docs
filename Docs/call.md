@@ -6,7 +6,7 @@ Optionally, we can add a code block to specify input variables for the task. We 
 
 Note that the order in which call statements are executed does not depend on the order in which they appear if the script; instead it is determined based on a graph of dependencies between task calls. This means that the program infers what order task calls should run in by evaluating which of their inputs are outputs of other task calls. 
 
-## Examples
+## Examples:
 
 ```wdl
 # in its simplest form
