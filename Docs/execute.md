@@ -27,5 +27,5 @@ By default, you can find all generated files (outputs and logs) in this folder:
 
 Running on a cluster or cloud platform can be a little more complicated than that, so we don't cover them in this quick-start guide. 
 
-## That's it! 
+## That's it!
 Now you're ready to write some scripts yourself. To get started, try checking out the [learn-WDL tutorials](https://github.com/openwdl/learn-wdl).

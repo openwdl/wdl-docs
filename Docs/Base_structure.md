@@ -31,8 +31,8 @@ workflow myWorkflowName {
       in = task_A.out
   }
 
-task Task_A {...}
-task Task_B {...}
+task task_A {...}
+task task_B {...}
 
 ```
 
@@ -113,7 +113,7 @@ workflow myWorkflowName {
 If we look inside a task definition, we find its core components: the command that will be run, which can be any command line that you would run in a terminal shell, and an output definition that identifies explicitly which part of the command constitutes its output.
 
 ```wdl
-task Task_A {
+task task_A {
   input {
     File ref
     File in

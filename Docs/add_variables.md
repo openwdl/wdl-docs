@@ -9,7 +9,7 @@ So let's look at how to include variables in our WDL script (we'll talk later ab
 Let's look at what an example task, `task_A`, actually contains in its `command` and `output` component blocks. 
 
 ```wdl
-task Task_A {
+task task_A {
   input {
     File ref
     File in
@@ -67,8 +67,8 @@ workflow myWorkflowName {
       in = task_A.out
   }
 
-task Task_A {...}
-task Task_B {...}
+task task_A {...}
+task task_B {...}
 ```
 
 Moving one level out to the body of the workflow, you see that we've *declared* a set of variables at the top. These declarations follow essentially the same rules as those inside a task. All we need to do now is connect these two levels so that arguments passed to the workflow can be used as inputs to the task.
