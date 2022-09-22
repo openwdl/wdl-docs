@@ -1,9 +1,8 @@
 # Conditionals (if/else)
-This documentation is in the process of being updated. In the meantime, you may find that some GATK commands are out of date, or that the WDL information is incomplete. If you encounter any issues you can't solve, please let us know.
 
-Conditionals have been implemented as of Cromwell version 24
+> Conditionals have been implemented as of Cromwell version 24
 
-Sometimes when pipelining, there are steps you want to run sometimes and not other times. This could mean switching between two paths (e.g. run a tool in modeA vs. run a tool in modeB) or skipping a step entirely (e.g. run a tool vs. not running a tool). In cases such as these, we will use a conditional statement.
+Sometimes when pipelining, there are steps you want to run sometimes and not other times. This could mean switching between two paths (e.g. run a tool in modeA vs. run a tool in modeB) or skipping a step entirely (e.g. run a tool vs. not running a tool). In cases such as these, we will use a *conditional* statement.
 
 To use a conditional statement in WDL, you write a standard if statement:
 

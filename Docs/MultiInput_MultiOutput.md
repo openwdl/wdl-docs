@@ -14,6 +14,7 @@ call stepC { input: in1=stepB.out1, in2=stepB.out2 }
 In context, this sort of plumbing would look as follows in a WDL script:
 
 ```wdl
+version 1.0
 workflow MultiOutMultiIn {
   input {
     File firstInput
@@ -87,6 +88,7 @@ For this toy example, we have defined two tasks:
 The workflow described above, in its entirety, would look like the following in a WDL script:
 
 ```wdl
+version 1.0
 workflow MultiOutMultiInExample {
   input {
     File inputVCF

@@ -27,6 +27,7 @@ This relies on a principle called "hierarchical naming" that allows us to identi
 To put this in context, here is what the code for the workflow illustrated above would look like in full:
 
 ```wdl
+version 1.0
 workflow LinearChain {
   input {
     File firstInput
@@ -98,6 +99,7 @@ The workflow involves three tasks:
 
 This is what the code for the workflow illustrated above would look like:
 ```wdl
+version 1.0
 workflow LinearChainExample {
   input {
     File originalBAM

@@ -8,6 +8,7 @@ To do this, we use the `scatter` function described in the [WDL 1.0 spec](https:
 The code below shows an example of the scatter function:
 
 ```wdl
+version 1.0
 workflow wf {
   Array[File] inputFiles
   scatter (oneFile in inputFiles) {
@@ -34,6 +35,7 @@ In other words, the `scatter` part of the process is *explicit* while the `gathe
 To put this in context, here is what the code for the workflow illustrated above would look like in full:
 
 ```wdl
+version 1.0
 workflow ScatterGather {
   input {
     Array[File] inputFiles
@@ -92,6 +94,7 @@ The workflow involves two tasks:
 This is what the code for the workflow illustrated above would look like:
 
 ```wdl
+version 1.0
 workflow ScatterGatherExample {
   input {
     Array[File] sampleBAMs

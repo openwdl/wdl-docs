@@ -29,6 +29,7 @@ call stepC {
 The workflow and its tasks altogether in a WDL script would look as follows:
 
 ```
+version 1.0
 workflow taskAlias {
   input {
     File firstInput
@@ -104,6 +105,7 @@ For this toy example, we have defined three tasks:
 The above workflow description would look like this in its entirety:
 
 ```wdl
+version 1.0
 workflow taskAliasExample {
   input {
     File rawVCFSample
