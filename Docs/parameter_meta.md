@@ -1,10 +1,12 @@
 # Parameter_meta
-This documentation is in the process of being updated. In the meantime, you may find that some GATK commands are out of date, or that the WDL information is incomplete. If you encounter any issues you can't solve, please let us know.
 
-The parameter_meta component is an optional property of a task. It is intended to store descriptions of input arguments and parameters used in the task command, which is particularly helpful if your variable names are not descriptive enough. Any item (i.e. input_file) in this section MUST be present in the command line.
+The `parameter_meta` component is an optional property of a workflow or task. It is intended to store descriptions of input arguments and parameters used in the workflow or task `command`, which is particularly helpful if your variable names are not descriptive enough. Any item (i.e. `input_file`) in this section MUST correspond to an input or output of either the workflow or the task, depending on where the `parameter_meta` component is used.
 
-Usage example
+## Example:
+
+```wdl
 parameter_meta {
-    input_file: "the BAM file to process"
-    sample_id: "the name of a sample"
+    my_input: "Input file to be analyzed"
+    name: "Name of the sample"
 }
+```
