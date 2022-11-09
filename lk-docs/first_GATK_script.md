@@ -1,9 +1,8 @@
-# [1] (howto) Write your first WDL script running GATK HaplotypeCaller
-This documentation is in the process of being updated. In the meantime, you may find that some GATK commands are out of date, or that the WDL information is incomplete. If you encounter any issues you can't solve, please let us know.
+# (howto) Write your first WDL script running GATK HaplotypeCaller
 
-Requirements
-
-This tutorial assumes that you have a (very) basic understanding of GATK tools and have read the Getting Started guide. You should also have installed the necessary tools. Lastly, you will need to download the zip bundle containing this tutorial's data. We will use a toy dataset: NA12878, a subset to chromosome 20. For a detailed description of each file in the bundle, see the README.
+ | Requirements | 
+ | :-- | 
+ | This tutorial assumes that you have a (very) basic understanding of GATK tools. You should also have installed the necessary tools. Lastly, you will need to download the zip bundle containing this tutorial's data. We will use a toy dataset: NA12878, a subset to chromosome 20. For a detailed description of each file in the bundle, see the README. |
 
 Introduction
 
