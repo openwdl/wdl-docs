@@ -10,7 +10,9 @@ The code below shows an example of the scatter function:
 ```wdl
 version 1.0
 workflow wf {
-  Array[File] inputFiles
+  input {
+    Array[File] inputFiles
+  }
   scatter (oneFile in inputFiles) {
     call stepA {
      input: 
