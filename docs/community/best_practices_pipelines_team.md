@@ -1,0 +1,2 @@
+# Best Practices from the Broad's Pipeline Development Team
+The Broad Pipeline Development team creates cloud-optimized workflows for multiple 'omic' data sets. The workflows are written in the Workflow Description Language and hosted in the WDL Analysis Research Pipelines (WARP) repository in GitHub. You can view the code in [WARP](https://github.com/broadinstitute/warp) and learn more about the repository, including WDL Best Practices on the [WARP documentation site](https://broadinstitute.github.io/warp/). 

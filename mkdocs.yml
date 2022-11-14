@@ -33,6 +33,6 @@ nav:
     - 'basename': 'basename.md'
     - 'Variable types in WDL': 'variable_types.md'
   - 'WDL Best Practices for Google Cloud':
-    - 'WDL cost optimization: Tips and tricks when working with Google Cloud in Terra': 'GC_cost_optimization.md'
+    - 'Best Practices from Broad Pipeline Development Team': 'community/best_practices_pipelines_team.md'
   - 'WDL Cookbook: Code snippets':
     - 'Running conditional tasks based on input size': 'conditionals_input_size.md'
