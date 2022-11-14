@@ -6,7 +6,11 @@ The ability to connect outputs to inputs described in [Linear Chaining](./Linear
 In the diagram above, we see that the outputs for **stepB** are named differently. This means we can specify where exactly each output goes in the next step's input fields, as shown in the example code snippet below:
 
 ```wdl
-call stepC { input: in1=stepB.out1, in2=stepB.out2 }
+call stepC { 
+  input: 
+    in1 = stepB.out1, 
+    in2 = stepB.out2 
+}
 ```
 
 ## Generic example script
