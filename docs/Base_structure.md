@@ -1,5 +1,6 @@
 # Base structure
 There are 5 basic components that form the core structure of a WDL script: 
+
 * workflow
 * task
 * call

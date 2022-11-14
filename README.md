@@ -7,4 +7,4 @@ The doc repository is currently organized into two sub-folders: WDL and communit
 
 This doc repository uses readthedocs. The `latest` version of the documentation points to the wdl-docs repo main branch. There are also stable versions of the documentation that match each WDL spec starting at WDL 1.0. These branches are semantically versioned; for example WDL 1.0 docs reside on the `1.0.0` branch. 
 
-To contribute, make a branch of the applicable spec branch. Since the organization of the doc site is set by the mkdocs.yml file, be sure to add any additional documentation to the site map in this file. 
+To contribute, make a branch off the applicable spec branch. Since the organization of the doc site is set by the mkdocs.yml file, be sure to add any additional documentation to the site map in this file. 
