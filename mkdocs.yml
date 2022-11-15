@@ -1,0 +1,38 @@
+site_name: wdl-docs
+theme:
+  name: readthedocs
+  include_homepage_in_sidebar: true
+  navigation_depth: 4
+  highlightjs: true
+
+nav:
+  - Home: 'index.md'
+  - Getting Started with WDL:
+    - 'Base structure': 'WDL/Base_structure.md'
+    - 'Add variables': 'WDL/add_variables.md'
+    - 'Add plumbing': 'WDL/add_plumbing.md'
+    - 'Validate syntax': 'WDL/validate_syntax.md'
+    - 'Specify inputs': 'WDL/specify_inputs.md'
+    - 'Execute!': 'WDL/execute.md'
+    - 'Toolkit: All the tools you need to write and run WDLs': 'WDL/toolkit.md'
+  - WDL Plumbing Options:
+    - 'Linear chaining': 'WDL/Linear_chaining.md'
+    - 'Branch and merge': 'WDL/Branch_and_merge.md'
+    - 'Multi-input/Multi-output': 'WDL/MultiInput_MultiOutput.md'
+    - 'Scatter-gather parallelism': 'WDL/ScatterGather_parallelism.md'
+    - 'Task aliasing': 'WDL/task_aliasing.md'
+    - 'Conditional (if/else)': 'WDL/conditionals.md'
+  - 'WDL Script Components':
+    - 'workflow': 'WDL/workflow.md'
+    - 'call': 'WDL/call.md'
+    - 'task': 'WDL/task.md'
+    - 'command': 'WDL/command.md'
+    - 'output': 'WDL/output'
+    - 'parameter_meta': 'WDL/parameter_meta.md'
+    - 'meta': 'WDL/meta.md'
+    - 'basename': 'WDL/basename.md'
+    - 'Variable types in WDL': 'WDL/variable_types.md'
+  - 'WDL Cookbook':
+    - 'Running conditional tasks based on input size': 'WDL/conditionals_input_size.md'
+  - 'Community':
+    - 'Broad Pipeline Development Team': 'community/best_practices_pipelines_team.md'

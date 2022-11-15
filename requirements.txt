@@ -1,0 +1,3 @@
+jinja2==3.0.3
+markdown==3.2.1
+mkdocs==1.4.2
