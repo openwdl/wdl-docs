@@ -1,5 +1,5 @@
 # wdl-docs
-This repository supports [wdl-docs](https://wdl-docs.readthedocs.io/en/latest/), a community-contributed WDL documentation site that includes tutorials and guides for basic WDL syntax, cook-book-style code snippets to show different WDL use-cases, and links to external community-contributed documentation, like WDL Best Practices.
+This repository supports [wdl-docs](https://wdl-docs.readthedocs.io/en/stable/), a community-contributed WDL documentation site that includes tutorials and guides for basic WDL syntax, cook-book-style code snippets to show different WDL use-cases, and links to external community-contributed documentation, like WDL Best Practices.
 
 ## What if I want to contribute?
 Everyone is encouraged to contribute to the documentation! 
