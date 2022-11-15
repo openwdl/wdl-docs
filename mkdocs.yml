@@ -32,7 +32,7 @@ nav:
     - 'meta': 'WDL/meta.md'
     - 'basename': 'WDL/basename.md'
     - 'Variable types in WDL': 'WDL/variable_types.md'
-  - 'WDL Best Practices for Google Cloud':
-    - 'Best Practices from Broad Pipeline Development Team': 'community/best_practices_pipelines_team.md'
-  - 'WDL Cookbook: Code snippets':
+  - 'WDL Cookbook':
     - 'Running conditional tasks based on input size': 'WDL/conditionals_input_size.md'
+  - 'Community':
+    - 'Broad Pipeline Development Team': 'community/best_practices_pipelines_team.md'
