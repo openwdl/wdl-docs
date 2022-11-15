@@ -9,6 +9,9 @@ Our preferred editor for writing WDLs; it offers a good balance of usability and
 
 Plugins that enable syntax highlighting (i.e. coloring code elements based on their function) for supported text editors. Syntax highlighting has been developed for [SublimeText and Visual Studio](https://github.com/broadinstitute/wdl-sublime-syntax-highlighter), [vim](https://github.com/broadinstitute/vim-wdl), and [IntelliJ](https://github.com/broadinstitute/winstanley#winstanley-an-intellij-plug-in-for-wdl).
 
+### [VSCode](https://code.visualstudio.com/)
+VS Code is a commonly used editor and IDE used in many different ways by folks working with a wide variety of code types.  There are several [WDL extensions](https://marketplace.visualstudio.com/search?term=wdl&target=VSCode&category=All%20categories&sortBy=Relevance) avialable for VSCode as well as for [json files](https://marketplace.visualstudio.com/search?term=json&target=VSCode&category=All%20categories&sortBy=Relevance) (which are the input files for WDL workflows).  WDL DevTools and WDL syntax highlighter are useful for WDLs, while Prettify Json and JSON Tools are particularly useful extensions for Json input files.  
+
 ## VISUALIZATION
 ### [Pipeline Builder](https://github.com/epam/pipeline-builder)
 
@@ -32,7 +35,3 @@ A cloud-based analysis platform for running workflows written in WDL via Cromwel
 [wdl_runner](https://github.com/broadinstitute/wdl-runner)
 
 A lightweight command-line workflow submission system that runs WDLs via Cromwell on Google Cloud.
-
-[wdlRunR](https://github.com/seandavi/wdlRunR)
-
-A Bioconductor package to manage WDL workflows from within R, developed by Sean Davis. See docs [here](https://seandavi.github.io/wdlRunR/).
