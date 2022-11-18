@@ -1,7 +1,7 @@
 # Branch and merge
 The ability to connect outputs to inputs described in [Linear Chaining](Linear_chaining.md) and [Multi-in/out](MultiInput_MultiOutput.md), which relies on `hierarchical` naming, can be further extended to direct a task's outputs to separate paths, do something with them, then merge the branching paths back together.
 
-![Diagram depicting input running through a process called StepA which produces an output. The output is then used as input into two separate processes running in parallel: StepB and StepC. The outputs of these parallel steps are then used as input into a process StepD.](/Images/branch_merge.png)
+![Diagram depicting input running through a process called StepA which produces an output. The output is then used as input into two separate processes running in parallel: StepB and StepC. The outputs of these parallel steps are then used as input into a process StepD.](../Images/branch_merge.png)
 
 In the diagram above, you can see that the output of `stepA` feeds into both `stepB` and `stepC` to produce different outputs, which we then feed together into `stepD`.
 ```wdl
@@ -104,7 +104,7 @@ task stepD {
 
 The branch and merge plumbing is used in the variant discovery part of the GATK pipeline. After variant calling you have a VCF which then needs to be filtered. In order to do that, we separate the SNPs from the Indels as each require different filters to be applied. After filtering, we combine the files back to one VCF.
 
-![Diagram depicting example workflow that uses branching. First, VCFs are used as input to the process splitVCFs resulting in a VCF containing SNPs and a VCF containing Indels. The VCF containing SNPs is then run through a process called FilerSNPS, whereas the output VCF containing Indels is run through a paralllel process called FilterIndels. The two resulting VCFs are then used as input to a process called CombineVariants which produces one final VCF output.](/Images/concrete_branch.png)
+![Diagram depicting example workflow that uses branching. First, VCFs are used as input to the process splitVCFs resulting in a VCF containing SNPs and a VCF containing Indels. The VCF containing SNPs is then run through a process called FilerSNPS, whereas the output VCF containing Indels is run through a paralllel process called FilterIndels. The two resulting VCFs are then used as input to a process called CombineVariants which produces one final VCF output.](../Images/concrete_branch.png)
 
 To see this concept in practice, we have defined four tasks:
 

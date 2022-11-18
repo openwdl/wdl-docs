@@ -4,7 +4,7 @@
 
 Sometimes when pipelining, there are steps you want to run sometimes and not other times. This could mean switching between two paths (e.g. run a tool in modeA vs. run a tool in modeB) or skipping a step entirely (e.g. run a tool vs. not running a tool). In cases such as these, we will use a *conditional* statement.
 
-![Diagram depicting an input going through a process called StepA, producing output. After, a conditional is used to determine if the output should be used as input StepB, which produces an output that is used as an optional input to task C](/Images/conditional_generic.png)
+![Diagram depicting an input going through a process called StepA, producing output. After, a conditional is used to determine if the output should be used as input StepB, which produces an output that is used as an optional input to task C](../Images/conditional_generic.png)
 
 To use a conditional statement in WDL, you write a standard `if()`statement:
 
@@ -103,7 +103,7 @@ It is important to note that ```stepC```’s input **must** be declared as an op
 ## Concrete example
 
 Here we declare `GVCFmode`, a variable of the type Boolean. If it is `true`, then we want to run the tool in GVCF mode, otherwise we want to run it in normal mode. Essentially, this workflow allows you to select which HaplotypeCaller method you wish to run.
-![A diagram of a workflow that starts with the Boolean variable GVCFmode. If the Boolean is set to true, the workflow takes in a BAM file input and runs the task HaplotypeCallerERC, which produces a GVCF output. If the Boolean is false, the workflow takes in a a BAM input that runs through the task HaplotypeCaller, producing a raw VCF.](/Images/conditional_concrete.png)
+![A diagram of a workflow that starts with the Boolean variable GVCFmode. If the Boolean is set to true, the workflow takes in a BAM file input and runs the task HaplotypeCallerERC, which produces a GVCF output. If the Boolean is false, the workflow takes in a a BAM input that runs through the task HaplotypeCaller, producing a raw VCF.](../Images/conditional_concrete.png)
 
 For our use case, we have declared three tasks, as follows:
 
