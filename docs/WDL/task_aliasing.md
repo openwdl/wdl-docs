@@ -3,7 +3,7 @@
 
 It would be tedious to copy-paste a task's definition and change the name each time you needed to use it again in the workflow. This method, termed [copy and paste programming](https://en.wikipedia.org/wiki/Copy-and-paste_programming), is simple enough up front but difficult to maintain in the long run. Imagine you found a typo in one of your tasks--you'd need to fix that typo in every single pasted task! However, using WDL's built-in task aliasing feature, you can call the same task code and assign it an alias. Then, following the principle of hierarchical naming, in order to access the output of an aliased task we use the alias, rather than the original task name.
 
-![Diagram depicting the same task being used twice for different input samples. The first time the task is called, it is called with an alias "as firstInput", whereas the second time it is called, it is called with the alias "as secondInput". The output from the task the first time is used in a process StepB whereas the output from the task the second time is used in a process StepC.](../Images/task_alias.png)
+![Diagram depicting the same task being used twice for different input samples. The first time the task is called, it is called with an alias "as firstInput", whereas the second time it is called, it is called with the alias "as secondInput". The output from the task the first time is used in a process StepB whereas the output from the task the second time is used in a process StepC.](/Images/task_alias.png)
 
 To use an alias, we use the syntax `call taskName as aliasName`, as demonstrated in the code snippet below:
 ```wdl
@@ -58,7 +58,7 @@ task stepA {
      File in
   }
   command <<<
-    programA I = ~{in} O = outputA.ext 
+    programA I=~{in} O=outputA.ext 
   >>>
   output { 
     File out = "outputA.ext" 
@@ -70,7 +70,7 @@ task stepB {
    File in  
   }
   command <<<
-    programB I = ~{in} O = outputB.ext 
+    programB I=~{in} O=outputB.ext 
   >>>
   output { 
     File out = "outputB.ext" 
@@ -82,7 +82,7 @@ task stepC {
     File in  
   }
   command <<<
-    programC I = ~{in} O = outputC.ext 
+    programC I=~{in} O=outputC.ext 
   >>>
   output { 
     File out = "outputC.ext" 
@@ -93,7 +93,7 @@ task stepC {
 
 Let's take a look at this task aliasing concept inside a real-world example; using the GATK, this workflow separates SNPs and Indels into distinct vcf files using the same task, `select`, but two distinct aliased calls, `selectSNPs` and `selectIndels`. The distinct outputs of these calls are then hard filtered by separate tasks designed specifically for them, `hardFilterSNP` and `hardFilterIndel`, respectively.
 
-![Diagram depicting how a raw VCF is used as input to the same task, "select" that is used with two different aliases; selectSNPs and selectIndels. The two separate outputs are then passed to two different tools, hardFileterSNPs and hardFilterIndels, respectively.](../Images/gatk_alias.png)
+![Diagram depicting how a raw VCF is used as input to the same task, "select" that is used with two different aliases; selectSNPs and selectIndels. The two separate outputs are then passed to two different tools, hardFileterSNPs and hardFilterIndels, respectively.](/Images/gatk_alias.png)
 For this toy example, we have defined three tasks:
 
 * **select** takes in a `String type`, specifying "SNP" or "Indel", and a `File rawVCF`, outputting a `File rawSubset` that contains only variants of the specified type.

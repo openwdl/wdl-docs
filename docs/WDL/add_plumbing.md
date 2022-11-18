@@ -36,7 +36,7 @@ WDL supports several different plumbing options and you can read more about them
 
 The simplest way to chain tasks together in a workflow is a **linear chain**, where we feed the output of one task to the input of the next, like so:
 
-![Diagram depicting the flow of data in a workflow that uses linear chaining. The output from step A is used as the input for step B, and the output from step B is used as the input for step C.](./Images/linear_chaining.png)
+![Diagram depicting the flow of data in a workflow that uses linear chaining. The output from step A is used as the input for step B, and the output from step B is used as the input for step C.](/Images/linear_chaining.png)
 
 This is easy to do because WDL allows us to refer to the output of any task (declared appropriately in the task's `output` block) within the `call` statement of another task (and indeed, anywhere else in the `workflow` block), using the syntax `task_name.output_variable`. So here, we simply specify in the call to `stepB` that we want it to use `stepA.out` as the value of the input variable `in`, and it's the same rule for `stepC`.
 
@@ -57,7 +57,7 @@ This relies on a principle called *hierarchical naming* that allows us to identi
 
 The ability to connect outputs to inputs described in [Linear Chaining](Linear_chaining.md), which relies on *hierarchical naming*, allows you to chain together tools that produce multiple outputs and accept multiple inputs, and specify exactly which output feeds into which input.
 
-![Diagram depicting the flow of data in a workflow with tasks producing multiple outputs that are used as inputs to a downstream task. The output from step A is used as the input for step B, and the outputs from step B, out1 and out2, are used as the inputs for step C, in1 and in2.](./Images/multi-input-multi-output.png)
+![Diagram depicting the flow of data in a workflow with tasks producing multiple outputs that are used as inputs to a downstream task. The output from step A is used as the input for step B, and the outputs from step B, out1 and out2, are used as the inputs for step C, in1 and in2.](/Images/multi-input-multi-output.png)
 
 Since the outputs for `stepB` are named differently, we can specify which output maps to which input for `stepC`.
 
@@ -73,7 +73,7 @@ call stepC {
 
 The ability to connect outputs to inputs described in [Linear Chaining](Linear_chaining.md) and [Multi-input/Multi-output](MultiInput_MultiOutput.md), which relies on *hierarchical naming*, can be further extended to direct a task's outputs to separate paths, do something with them, then merge the branching paths back together.
 
-![Diagram depicting the flow of data in a workflow with branching paths that merge back together. The output from step A is used as the input for steps B and C, and the outputs from steps B and C are used as the inputs for step D.](./Images/branch-and-merge.png)
+![Diagram depicting the flow of data in a workflow with branching paths that merge back together. The output from step A is used as the input for steps B and C, and the outputs from steps B and C are used as the inputs for step D.](/Images/branch-and-merge.png)
 
 Here you can see that the output of `stepA` feeds into both `stepB` and `stepC` to produce different outputs, which we then feed together into `stepD`.
 
@@ -97,7 +97,7 @@ call stepD {
 
 Sometimes when pipelining, there are steps you won't want to run all the time. This could mean switching between two paths (run a tool in modeA vs. run a tool in modeB) or skipping a step entirely (run a tool vs. not running a tool). In cases such as these, we will use a **conditional** statement.
 
-![Diagram depicting the flow of data in a workflow with conditional statements. The output from step A is used to determine whether step B will be executed. If the conditional statement is true, the output from step A is used as the input for step B, and the output from step B is used as the input for step C. If the conditional statement is false, the output from step A is used as the input for step C, and step B is skipped.](./Images/conditionals.png)
+![Diagram depicting the flow of data in a workflow with conditional statements. The output from step A is used to determine whether step B will be executed. If the conditional statement is true, the output from step A is used as the input for step B, and the output from step B is used as the input for step C. If the conditional statement is false, the output from step A is used as the input for step C, and step B is skipped.](/Images/conditionals.png)
 
 To use a conditional statement in WDL, you write a standard `if` statement:
 
@@ -133,7 +133,7 @@ if (!shouldICallStepB) {
 
 Parallelism is a way to make a program finish faster by performing several operations in parallel, rather than sequentially (i.e. waiting for each operation to finish before starting the next one). For a more detailed introduction on parallelism, you can read about it in-depth in the GATK article, [Parallelism - Multithreading - Scatter Gather](https://gatk.broadinstitute.org/hc/en-us/articles/360035532012).
 
-![Diagram depicting the flow of data in a workflow using scatter-gather parallelism. Several input files are fed into step A in parallel, and the output from each execution of step A is combined and used as the input for step B.](../Images/scatter-gather-parallelism.png)
+![Diagram depicting the flow of data in a workflow using scatter-gather parallelism. Several input files are fed into step A in parallel, and the output from each execution of step A is combined and used as the input for step B.](/Images/scatter-gather-parallelism.png)
 
 To do this, we use the `scatter` function from the [WDL standard library](https://github.com/openwdl/wdl/blob/main/versions/1.0/SPEC.md#standard-library), which will produce parallelizable jobs running the same task on each input in an array, and output the results as an array as well.
 
@@ -160,7 +160,7 @@ In other words, the **scatter** part of the process is *explicit* while the **ga
 
 When you need to call a task more than once in a workflow, you can use **task aliasing**. It would be tedious to copy-paste a task's definition and change the name each time you needed to use it again in the workflow. This method, termed [copy and paste programming](https://en.wikipedia.org/wiki/Copy-and-paste_programming), is simple enough up front but difficult to maintain in the long run. Imagine you found a typo in one of your tasks--you'd need to fix that typo in every single pasted task! However, using WDL's built-in task aliasing feature, you can call the same task code and assign it an alias. Then, following the principle of hierarchical naming, in order to access the output of an aliased task we use the alias, rather than the original task name.
 
-![Diagram depicting the flow of data in a workflow using task aliasing. Step A is first called using the task alias, firstInput, and the output of this task is used as the input for step B. Step A is called a second time using the task alias, secondInput, and the output of this task is used as the input for step C.](../Images/task-aliasing.png)
+![Diagram depicting the flow of data in a workflow using task aliasing. Step A is first called using the task alias, firstInput, and the output of this task is used as the input for step B. Step A is called a second time using the task alias, secondInput, and the output of this task is used as the input for step C.](/Images/task-aliasing.png)
 
 To use an alias, we use the syntax `call taskName as aliasName`.
 
