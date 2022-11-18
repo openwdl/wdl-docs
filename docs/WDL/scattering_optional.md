@@ -1,6 +1,6 @@
 # Scattering on optional types
 
-Scattering on optional types isn’t actually possible in WDL 1.0, but by using the `select_first()	` function, you can convert an optional type to a non-optional type.
+Scattering on optional types isn’t actually possible in WDL 1.0, but by using the `select_first()` function, you can convert an optional type to a non-optional type.
 
 You’ll likely find this method useful anytime you want to scatter optional and non-optional inputs together. For example, you might have arrays of samples and sample IDs that need to be scattered and processed, but you might also want the flexibility to provide sample names. In that case, the array of sample names would be an optional workflow input that, when provided, gets scattered along with the arrays of samples and sample IDs.
 
