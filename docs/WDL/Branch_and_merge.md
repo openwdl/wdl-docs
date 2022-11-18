@@ -17,7 +17,7 @@ call stepC {
 call stepD { 
   input: 
     in1 = stepC.out, 
-    in2=stepB.out 
+    in2 = stepB.out 
 }
 ```
 ## Generic example script
