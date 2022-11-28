@@ -1,6 +1,6 @@
 # Welcome to wdl-docs!
 
-A community-contributed WDL documentation site that is hosted in the [open-wdl/wdl-docs](https://github.com/ekiernan/wdl-docs) GitHub Repository. 
+A community-contributed WDL documentation site that is hosted in the [open-wdl/wdl-docs](https://github.com/openwdl/wdl-docs) GitHub Repository. 
 
 ## What can I find here?
 * Tutorials and guides for using the basic WDL syntax
