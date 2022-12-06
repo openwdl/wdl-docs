@@ -34,6 +34,7 @@ nav:
     - 'Variable types in WDL': 'WDL/variable_types.md'
   - 'WDL Cookbook':
     - 'Running conditional tasks based on input size': 'WDL/conditionals_input_size.md'
+    - 'Running conditional tasks based on optional inputs': 'WDL/conditionals_optional_input.md'
     - 'Conditionally running different WDL tasks based on input data type': 'WDL/conditionals_input_size.md'
     - 'Scattering on an index': 'WDL/scattering_index.md'
     - 'Scattering on optional types': 'WDL/scattering_optional.md'
