@@ -41,3 +41,5 @@ nav:
     - 'Scattering on optional types': 'WDL/scattering_optional.md'
   - 'Community':
     - 'Broad Pipeline Development Team': 'community/best_practices_pipelines_team.md'
+  - 'Feedback':
+    - 'Feedback': 'feedback.md'
