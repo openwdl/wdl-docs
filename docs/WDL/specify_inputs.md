@@ -5,13 +5,13 @@ A much better way to proceed is to specify all the values for the input variable
 
 Still, on the face of it you might think that putting together the JSON file of inputs (specifically, structuring it correctly and not forgetting any command's inputs) would be a tedious and/or daunting task, especially in a command-line-only world with no point-and-click GUI.
 
-But fear not! Help is at hand. WDL comes with a utility function (in the `wdltool package`) that will parse your WDL script and automatically generate a template JSON file containing the appropriate input file and parameter definitions. All you need to do then is to populate a copy of the file with the actual values that you want to use in a given run of the pipeline. When you are ready to run your script on your chosen execution engine, you'll simply provide the inputs file along with the script.
+But fear not! Help is at hand. WDL comes with a utility function (in the [WOMtool package](https://cromwell.readthedocs.io/en/stable/WOMtool/)) that will parse your WDL script and automatically generate a template JSON file containing the appropriate input file and parameter definitions. All you need to do then is to populate a copy of the file with the actual values that you want to use in a given run of the pipeline. When you are ready to run your script on your chosen execution engine, you'll simply provide the inputs file along with the script.
 
 ## Generating the template JSON
 
-To generate the template of `inputs` for your WDL script, simply call the wdltool inputs function on your script:
+To generate the template of `inputs` for your WDL script, simply call the WOMtool inputs function on your script:
 ```java
-java -jar wdltool.jar inputs myWorkflow.wdl > myWorkflow_inputs.json
+java -jar womtool.jar inputs myWorkflow.wdl > myWorkflow_inputs.json
 ```
 
 This will create a file called `myWorkflow_inputs.json` that lists all the inputs to all the tasks in your script following the pattern below:
