@@ -34,13 +34,14 @@ The docs folder contains a [mkdocs yml](https://github.com/openwdl/wdl-docs/blob
 
 ## Contribution process
 If you're planning to fork the repo and contribute, follow these steps:
-1. For the repository. 
-2. Make a branch of an existing spec version branch or make a new branch to reflect the version of the documentation you're adding or updating. 
-3. Decide which folder you want to host documentation (**WDL** or **community**). If you feel a new folder is necessary, you can also create one.
-4. Make changes in your fork.
-5. Update the mkdocs.yml file (site map) if you're adding new docs.
-5. Create a PR against the WDL spec version branch you're working off.
-6. Tag an [OpenWDL](https://github.com/openwdl) member for review.
+1. Review the OpenWDL [license](https://github.com/openwdl/wdl-docs/blob/main/LICENSE).
+1. Fork the repository. 
+1. Make a branch of an existing spec version branch or make a new branch to reflect the version of the documentation you're adding or updating. 
+1. Decide which folder you want to host documentation (**WDL** or **community**). If you feel a new folder is necessary, you can also create one.
+1. Make changes in your fork.
+1. Update the mkdocs.yml file (site map) if you're adding new docs.
+1. Create a PR against the WDL spec version branch you're working off.
+1. Tag an [OpenWDL](https://github.com/openwdl) member for review.
 
 ## Questions?
 If you have questions or want feedback before making a PR, [file an issue](https://github.com/openwdl/wdl-docs/issues/new/choose) in the repo. 
