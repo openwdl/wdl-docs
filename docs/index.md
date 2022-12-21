@@ -37,8 +37,8 @@ The wdl-docs **main** branch is used for the latest version of WDL for which we 
 
 The wdl-docs site also has a stable version of documentation which currently points to the `1.0.0` branch.  
 
-### Site map in the mkdocs yml
-The docs folder contains a [mkdocs yml](https://github.com/openwdl/wdl-docs/blob/main/mkdocs.yml) file which contains the site map for the documentation website. All the website sections and article names are organized using this yml file. If you want to add new sections to the website or add or change article names, use this yml file.
+### Site map in the mkdocs YML
+The docs folder contains a [mkdocs YML](https://github.com/openwdl/wdl-docs/blob/main/mkdocs.yml) file which contains the site map for the documentation website. All the website sections and article names are organized using this YML file. If you want to add new sections to the website or add or change article names, use this YML file.
 
 ## Contribution process
 If you're planning to fork the repo and contribute, follow these steps:
