@@ -1,6 +1,6 @@
 # Contributing to WDL-docs
 
-WDL strives to be community driven and thus relies on suggestions and assistance from people such as yourself. We welcome any contribution that you are willing to provide whether it be in the form of syntax suggestions, feature requests, documentation help, or simply pointing out our ~~tyops~~ typos. All that we ask is that you agree to the following [contributor agreement](#contributor-agreement) and follow a [few guidelines](#how-to-contribute).
+WDL strives to be community driven and thus relies on suggestions and assistance from people such as yourself. We welcome any contribution that you are willing to provide whether it be in the form of syntax suggestions, feature requests, documentation help, or simply pointing out our ~~tyops~~ (typos). All that we ask is that you agree to the following [contributor agreement](#contributor-agreement) and follow a [few guidelines](#how-to-contribute).
 
 # Contributor agreement
 
