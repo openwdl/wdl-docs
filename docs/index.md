@@ -19,7 +19,7 @@ Everyone is encouraged to contribute to the documentation! Types of contribution
 ## How to contribute
 There are two main ways you can contribute:
 1. [File an issue](https://github.com/openwdl/wdl-docs/issues/new/choose) in wdl-docs repository (good option if you're lacking time to make a fix). 
-2. Make a fork of the repository to add updates or new docs and make a PR.
+2. Make a fork of the repository to add new docs or update existing ones and make a PR.
 
 If you fork the repo to contribute, please read about the structure of the repo below so you know where to host different types of docs. If you'd like to make changes to the structure, add your suggestion to a new issue.
 
