@@ -40,6 +40,7 @@ nav:
     - 'Conditionally running different WDL tasks based on input data type': 'WDL/conditionals_input_size.md'
     - 'Scattering on an index': 'WDL/scattering_index.md'
     - 'Scattering on optional types': 'WDL/scattering_optional.md'
+    - 'Organize multiple inputs using structs': 'WDL/using_structs.md'
   - 'Community':
     - 'Broad Pipeline Development Team': 'community/best_practices_pipelines_team.md'
   - 'Feedback':
