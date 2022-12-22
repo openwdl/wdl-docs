@@ -34,6 +34,7 @@ nav:
     - 'Variable types in WDL': 'WDL/variable_types.md'
   - 'WDL Cookbook':
     - 'Using task outputs downstream': 'WDL/chain_tasks_together.md'
+    - 'Running a task with different parameters based on whether on optional input is defined': 'WDL/different_parameters.md'
     - 'Running conditional tasks based on input size': 'WDL/conditionals_input_size.md'
     - 'Running conditional tasks based on optional inputs': 'WDL/conditionals_optional_input.md'
     - 'Conditionally running different WDL tasks based on input data type': 'WDL/conditionals_input_size.md'
