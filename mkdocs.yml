@@ -34,6 +34,7 @@ nav:
     - 'Variable types in WDL': 'WDL/variable_types.md'
   - 'WDL Cookbook':
     - 'Using task outputs downstream': 'WDL/chain_tasks_together.md'
+    - 'Building multi-path workflows with branch and merge plumbing': 'WDL/multipath_branch_and_merge.md'
     - 'Building multi-path workflows with conditionals and select_first()': 'WDL/multipath_conditionals.md'
     - 'Running a task with different parameters based on whether on optional input is defined': 'WDL/different_parameters.md'
     - 'Running conditional tasks based on input size': 'WDL/conditionals_input_size.md'
