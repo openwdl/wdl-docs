@@ -38,6 +38,7 @@ nav:
     - 'Running conditional tasks based on input size': 'WDL/conditionals_input_size.md'
     - 'Running conditional tasks based on optional inputs': 'WDL/conditionals_optional_input.md'
     - 'Conditionally running different WDL tasks based on input data type': 'WDL/conditionals_input_size.md'
+    - 'Parallelizing by scattering on an array': 'WDL/scattering_array.md'
     - 'Scattering on an index': 'WDL/scattering_index.md'
     - 'Scattering on optional types': 'WDL/scattering_optional.md'
     - 'Organize multiple inputs using structs': 'WDL/using_structs.md'
