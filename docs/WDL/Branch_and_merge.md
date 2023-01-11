@@ -3,6 +3,7 @@ The ability to connect outputs to inputs described in [Linear Chaining](Linear_c
 
 ![Diagram depicting input running through a process called StepA which produces an output. The output is then used as input into two separate processes running in parallel: StepB and StepC. The outputs of these parallel steps are then used as input into a process StepD.](../Images/branch_merge.png)
 
+
 In the diagram above, you can see that the output of `stepA` feeds into both `stepB` and `stepC` to produce different outputs, which we then feed together into `stepD`.
 ```wdl
 version 1.0

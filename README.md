@@ -2,6 +2,7 @@
 This repository supports [wdl-docs](https://wdl-docs.readthedocs.io/en/stable/), a community-contributed WDL documentation site that includes tutorials and guides for basic WDL syntax, cook-book-style code snippets to show different WDL use-cases, and links to external community-contributed documentation, like WDL Best Practices.
 
 ## What if I want to contribute?
+
 Everyone is encouraged to contribute to the documentation! Types of contributions you can make:
 * Typo fixes
 * Updates to doc content
@@ -46,6 +47,4 @@ If you're planning to fork the repo and contribute, follow these steps:
 
 ## Questions?
 If you have questions or want feedback before making a PR, [file an issue](https://github.com/openwdl/wdl-docs/issues/new/choose) in the repo. 
-
-
 

@@ -1,6 +1,7 @@
 # Scatter-gather parallelism
 Parallelism is a way to make a program finish faster by performing several operations in parallel, rather than sequentially (i.e. waiting for each operation to finish before starting the next one). For a more detailed introduction on parallelism, you can read about it in-depth [here](https://gatk.broadinstitute.org/hc/en-us/articles/360035532012).
 
+
 ![Diagram depicting parallelism. Three separate inputs are individually used as input to the same workflow running in parallel. The workflow runs the input through a process StepA. Each independent workflow produces one output which is are then gathered and all used together as input to a new process StepB, which produces a single output.](../Images/scatter-gather-parallelism.png)
 
 To do this, we use the `scatter` function described in the [WDL 1.0 spec](https://github.com/openwdl/wdl/blob/main/versions/1.0/SPEC.md#scatter--gather), which will produce parallelizable jobs running the same task on each input in an array, and output the results as an array as well. 
