@@ -58,7 +58,7 @@ task stepA {
      File in
   }
   command <<<
-    programA I = ~{in} O = outputA.ext 
+    programA I=~{in} O=outputA.ext 
   >>>
   output { 
     File out = "outputA.ext" 
@@ -70,7 +70,7 @@ task stepB {
    File in  
   }
   command <<<
-    programB I = ~{in} O = outputB.ext 
+    programB I=~{in} O=outputB.ext 
   >>>
   output { 
     File out = "outputB.ext" 
@@ -82,7 +82,7 @@ task stepC {
     File in  
   }
   command <<<
-    programC I = ~{in} O = outputC.ext 
+    programC I=~{in} O=outputC.ext 
   >>>
   output { 
     File out = "outputC.ext" 

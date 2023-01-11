@@ -36,7 +36,7 @@ WDL supports several different plumbing options and you can read more about them
 
 The simplest way to chain tasks together in a workflow is a **linear chain**, where we feed the output of one task to the input of the next, like so:
 
-![Diagram depicting the flow of data in a workflow that uses linear chaining. The output from step A is used as the input for step B, and the output from step B is used as the input for step C.](./Images/linear_chaining.png)
+![Diagram depicting the flow of data in a workflow that uses linear chaining. The output from step A is used as the input for step B, and the output from step B is used as the input for step C.](../Images/linear_chaining.png)
 
 This is easy to do because WDL allows us to refer to the output of any task (declared appropriately in the task's `output` block) within the `call` statement of another task (and indeed, anywhere else in the `workflow` block), using the syntax `task_name.output_variable`. So here, we simply specify in the call to `stepB` that we want it to use `stepA.out` as the value of the input variable `in`, and it's the same rule for `stepC`.
 
@@ -57,7 +57,7 @@ This relies on a principle called *hierarchical naming* that allows us to identi
 
 The ability to connect outputs to inputs described in [Linear Chaining](Linear_chaining.md), which relies on *hierarchical naming*, allows you to chain together tools that produce multiple outputs and accept multiple inputs, and specify exactly which output feeds into which input.
 
-![Diagram depicting the flow of data in a workflow with tasks producing multiple outputs that are used as inputs to a downstream task. The output from step A is used as the input for step B, and the outputs from step B, out1 and out2, are used as the inputs for step C, in1 and in2.](./Images/multi-input-multi-output.png)
+![Diagram depicting the flow of data in a workflow with tasks producing multiple outputs that are used as inputs to a downstream task. The output from step A is used as the input for step B, and the outputs from step B, out1 and out2, are used as the inputs for step C, in1 and in2.](../Images/multi-input-multi-output.png)
 
 Since the outputs for `stepB` are named differently, we can specify which output maps to which input for `stepC`.
 
@@ -73,7 +73,7 @@ call stepC {
 
 The ability to connect outputs to inputs described in [Linear Chaining](Linear_chaining.md) and [Multi-input/Multi-output](MultiInput_MultiOutput.md), which relies on *hierarchical naming*, can be further extended to direct a task's outputs to separate paths, do something with them, then merge the branching paths back together.
 
-![Diagram depicting the flow of data in a workflow with branching paths that merge back together. The output from step A is used as the input for steps B and C, and the outputs from steps B and C are used as the inputs for step D.](./Images/branch-and-merge.png)
+![Diagram depicting the flow of data in a workflow with branching paths that merge back together. The output from step A is used as the input for steps B and C, and the outputs from steps B and C are used as the inputs for step D.](../Images/branch-and-merge.png)
 
 Here you can see that the output of `stepA` feeds into both `stepB` and `stepC` to produce different outputs, which we then feed together into `stepD`.
 
@@ -97,7 +97,7 @@ call stepD {
 
 Sometimes when pipelining, there are steps you won't want to run all the time. This could mean switching between two paths (run a tool in modeA vs. run a tool in modeB) or skipping a step entirely (run a tool vs. not running a tool). In cases such as these, we will use a **conditional** statement.
 
-![Diagram depicting the flow of data in a workflow with conditional statements. The output from step A is used to determine whether step B will be executed. If the conditional statement is true, the output from step A is used as the input for step B, and the output from step B is used as the input for step C. If the conditional statement is false, the output from step A is used as the input for step C, and step B is skipped.](./Images/conditionals.png)
+![Diagram depicting the flow of data in a workflow with conditional statements. The output from step A is used to determine whether step B will be executed. If the conditional statement is true, the output from step A is used as the input for step B, and the output from step B is used as the input for step C. If the conditional statement is false, the output from step A is used as the input for step C, and step B is skipped.](../Images/conditionals.png)
 
 To use a conditional statement in WDL, you write a standard `if` statement:
 

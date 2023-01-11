@@ -68,7 +68,7 @@ task stepA {
       File in
     }
     command <<<
-      programA I = ~{in} O = outputA.ext 
+      programA I=~{in} O=outputA.ext 
     >>>
     output { 
       File out = "outputA.ext" 
@@ -79,7 +79,7 @@ task stepB {
       File in
     }
     command <<< 
-      programB I = ~{in} O = outputB.ext 
+      programB I=~{in} O=outputB.ext 
     >>>
     output { 
       File out = "outputB.ext" 
@@ -91,7 +91,7 @@ task stepC {
       File? in_maybe   
     }
     command <<<
-     programB I = ~{in_maybe} O = outputB.ext 
+     programB I=~{in_maybe} O=outputB.ext 
     >>>
     output { 
       File out = "outputB.ext" 
@@ -103,7 +103,8 @@ It is important to note that ```stepC```’s input **must** be declared as an op
 ## Concrete example
 
 Here we declare `GVCFmode`, a variable of the type Boolean. If it is `true`, then we want to run the tool in GVCF mode, otherwise we want to run it in normal mode. Essentially, this workflow allows you to select which HaplotypeCaller method you wish to run.
-![A diagram of a workflow that starts with the Boolean variable GVCFmode. If the Boolean is set to true, the workflow takes in a BAM file input and runs the task HaplotypeCallerERC, which produces a GVCF output. If the Boolean is false, the workflow takes in a a BAM input that runs through the task HaplotypeCaller, producing a raw VCF.](./Images/conditional_concrete.png)
+
+![A diagram of a workflow that starts with the Boolean variable GVCFmode. If the Boolean is set to true, the workflow takes in a BAM file input and runs the task HaplotypeCallerERC, which produces a GVCF output. If the Boolean is false, the workflow takes in a a BAM input that runs through the task HaplotypeCaller, producing a raw VCF.](../Images/conditional_concrete.png)
 
 For our use case, we have declared three tasks, as follows:
 
