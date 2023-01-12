@@ -10,6 +10,7 @@ A community-contributed WDL documentation site that is hosted in the [openwdl/wd
 
 ## What if I want to contribute?
 Everyone is encouraged to contribute to the documentation! Types of contributions you can make:
+
 * Typo fixes
 * Updates to doc content
 * Suggestions for existing docs
@@ -18,6 +19,7 @@ Everyone is encouraged to contribute to the documentation! Types of contribution
 
 ## How to contribute
 There are two main ways you can contribute:
+
 1. [File an issue](https://github.com/openwdl/wdl-docs/issues/new/choose) in wdl-docs repository (good option if you're lacking time to make a fix). 
 2. Make a fork of the repository to add new docs or update existing ones and make a PR.
 
@@ -43,6 +45,7 @@ The docs folder contains a [mkdocs YML](https://github.com/openwdl/wdl-docs/blob
 
 ## Contribution process
 If you're planning to fork the repo and contribute, follow these steps:
+
 1. Review the OpenWDL [license](https://github.com/openwdl/wdl-docs/blob/main/LICENSE).
 1. Review the [contributor agreement](CONTRIBUTING.md)
 1. Fork the repository. 
