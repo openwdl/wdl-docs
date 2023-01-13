@@ -46,5 +46,6 @@ nav:
     - 'Organize multiple inputs using structs': 'WDL/using_structs.md'
   - 'Community':
     - 'Broad Pipeline Development Team': 'community/best_practices_pipelines_team.md'
+    - 'WDL at Fred Hutch': 'community/fred_hutch.md'
   - 'Feedback':
     - 'Feedback': 'feedback.md'
