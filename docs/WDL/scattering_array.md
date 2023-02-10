@@ -139,4 +139,4 @@ workflow Imputation {
 
 - [Scatter-gather parallelism WDL doc](ScatterGather_parallelism.md)
 - [WDL 1.0 spec](https://github.com/openwdl/wdl/blob/main/versions/1.0/SPEC.md)
-- PIPELINE pipeline [code](https://github.com/broadinstitute/warp/blob/master/pipelines/broad/arrays/imputation/Imputation.wdl) and [documentation](https://broadinstitute.github.io/warp/docs/Pipelines/Imputation_Pipeline/README)
+- Imputation pipeline [code](https://github.com/broadinstitute/warp/blob/master/pipelines/broad/arrays/imputation/Imputation.wdl) and [documentation](https://broadinstitute.github.io/warp/docs/Pipelines/Imputation_Pipeline/README)

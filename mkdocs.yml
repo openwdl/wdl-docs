@@ -39,12 +39,13 @@ nav:
     - 'Running a task with different parameters based on whether on optional input is defined': 'WDL/different_parameters.md'
     - 'Running conditional tasks based on input size': 'WDL/conditionals_input_size.md'
     - 'Running conditional tasks based on optional inputs': 'WDL/conditionals_optional_input.md'
-    - 'Conditionally running different WDL tasks based on input data type': 'WDL/conditionals_input_size.md'
+    - 'Conditionally running different WDL tasks based on input data type': 'WDL/conditionals_input_type.md'
     - 'Parallelizing by scattering on an array': 'WDL/scattering_array.md'
     - 'Scattering on an index': 'WDL/scattering_index.md'
     - 'Scattering on optional types': 'WDL/scattering_optional.md'
     - 'Organize multiple inputs using structs': 'WDL/using_structs.md'
   - 'Community':
     - 'Broad Pipeline Development Team': 'community/best_practices_pipelines_team.md'
+    - 'WDL at Fred Hutch': 'community/fred_hutch.md'
   - 'Feedback':
     - 'Feedback': 'feedback.md'
