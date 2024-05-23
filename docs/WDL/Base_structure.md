@@ -10,7 +10,7 @@ There are 5 basic components that form the core structure of a WDL script:
 There are also some optional components you can use to specify **runtime** parameters (like environment conditions such as a Docker image), **meta** information like the task author and email, and **parameter_meta** descriptions of inputs and outputs -- but we're not going to worry about them right now.
 
 
-Let's look at how the core components are structured in a minimal WDL script that describes a **workflow**called **myWorkflowName** and two tasks, **task_A** and **task_B** (the names can be anything you want and do not have to include the words 'task' or 'workflow'). 
+Let's look at how the core components are structured in a minimal WDL script that describes a **workflow** called **myWorkflowName** and two tasks, **task_A** and **task_B** (the names can be anything you want and do not have to include the words 'task' or 'workflow'). 
 
 ```wdl
 version 1.0
