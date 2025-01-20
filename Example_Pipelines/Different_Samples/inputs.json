@@ -1,8 +1,0 @@
-{
-  "DifferentSamples.mixed_research_and_clinical_sample": [
-    "gs://wdl-doc-test-data/sample1.txt",
-    "gs://wdl-doc-test-data/sample2.txt",
-    "gs://wdl-doc-test-data/sample1.clinical.txt"
-  ],
-  "DifferentSamples.ClinicalTask.disk_size_gb": "50"
-}

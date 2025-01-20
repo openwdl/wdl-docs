@@ -1,2 +1,8 @@
-
 .DS_Store
+node_modules/
+
+# Disable the Vitepress cache.
+.vitepress/cache/*
+
+# Disable the Vitepress distribution folder.
+.vitepress/dist/*
