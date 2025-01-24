@@ -74,6 +74,7 @@ export default defineConfig({
           { text: "Tasks", link: "/language-guide/tasks.md" },
           { text: "Workflows", link: "/language-guide/workflows.md" },
           { text: "Imports", link: "/language-guide/imports.md" },
+          { text: "Versions", link: "/language-guide/versions.md" },
         ],
       },
       {
@@ -94,7 +95,11 @@ export default defineConfig({
         text: "Reference",
         items: [
           {
-            text: "Standard Library",
+            text: "Upgrade guide",
+            link: "/reference/upgrade-guide"
+          },
+          {
+            text: "Standard library",
             items: [
               {
                 text: "Numeric functions",
