@@ -24,6 +24,7 @@ export default defineConfig({
   appearance: "force-dark",
   base: "/",
   ignoreDeadLinks: ["./LICENSE"],
+  head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
   themeConfig: {
     /**
      * Logo and site title.
