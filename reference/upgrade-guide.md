@@ -37,6 +37,7 @@ Use this checklist to ensure you hit all of the sections.
 
 <input type="checkbox" /> New `Directory` type ([link](#new-directory-type)).<br />
 <input type="checkbox" /> Replacement of `runtime` section with `requirements` and `hints` sections ([link](#replacement-of-runtime-with-requirements-and-hints)). <br />
+<input type="checkbox" /> Deprecation of `runtime` section ([link](#deprecation-of-runtime-section)). <br />
 <input type="checkbox" /> New standard library functions
 ([link](#new-standard-library-functions)). <br />
 <input type="checkbox" /> Multi-line strings ([link](#multi-line-strings)). <br />
@@ -59,9 +60,9 @@ the use of a directory. If the intention of any of your arguments is to be used
 to refer to a directory on the filesystem, you are encouraged to update the
 parameters to a `Directory` type.
 
-### Replacement of section `runtime` with `requirements` and `hints` sections
+### Deprecation of `runtime` section
 
-The `runtime` section, which previously held both requirement contraints and
+The `runtime` section, which previously held both requirement constraints and
 hints to the execution engine, has now been split into the `requirements`
 ([#540](https://github.com/openwdl/wdl/issues/540)) section and `hints`
 ([#541](https://github.com/openwdl/wdl/issues/541)) section respectively. You
@@ -69,13 +70,14 @@ should split out these keys based on the definitions in the
 specification<sup>[1](https://github.com/openwdl/wdl/blob/wdl-1.2/SPEC.md#-requirements-section),
 [2](https://github.com/openwdl/wdl/blob/wdl-1.2/SPEC.md#-hints-section)</sup>.
 
-🗑️ This change deprecates the `runtime` section, which will be removed in WDL
-v2.0.
+🗑️ This change deprecates the `runtime` section, which will be removed in WDL v2.0.
+That being said, if desired, you can continue to use the `runtime` section in your WDL
+documents—it's just not recommended.
 
 ### New standard library functions
 
 The following are new standard library functions and their definitions. You are
-encouraged to read throught them and replace any custom functionality that would
+encouraged to read through them and replace any custom functionality that would
 now be duplicated in favor of these functions.
 
 - `contains_key`: whether or not a `Map` or `Object` contain a specific member
@@ -109,7 +111,7 @@ String foo = <<<
 ### Optional `input:` statement
 
 As noted in [#524](https://github.com/openwdl/wdl/pull/524), the `input:`
-statement that preceeds call bodies is unnecessary historical boilerplate. This
+statement that precedes call bodies is unnecessary historical boilerplate. This
 statement is now optional in `call` bodies. You are encouraged to remove these
 from your `call` bodies.
 

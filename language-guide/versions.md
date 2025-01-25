@@ -26,8 +26,15 @@ of upgrading, and how to get help, see the [Upgrade guide] in the Reference sect
 
 ## Version specification
 
-The WDL version is a required statement at the top of every WDL document—it
-**must** be the first non-comment within the document.
+The WDL version is a statement that appears at the top of a WDL document—when included,
+it **must** be the first non-comment within the document.
+
+:::tip NOTE
+Technically, the version statement is not _required_, but it is highly recommended that
+you do include it in all of your WDL documents. Omission of the version statement
+defaults to a very early version of the WDL specification (`draft-2`).
+:::
+
 
 You can specify the version of your WDL document like so:
 
