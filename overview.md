@@ -28,11 +28,12 @@ The following are the top-level values of the project.
   as conditional execution, dynamic resource allocation, and scatter-gather operations
   are easy to understand and express in your workflows. Further, WDL includes a
   comprehensive standard library of common functions.
-- **Open standard.** WDL is collectively designed and developed by a distributed, open
-  community. This means you can develop with confidence that the foundation you build on
-  will remain open in perpetuity. It also means that _you_ can participate in the
-  community make sure WDL is as good as it can be! Join Slack or participate on GitHub
-  to have your voice heard in that process.
+- **Community-driven, open standard.** WDL is collectively designed and developed by a
+  number of distributed community members via an open process. This means you can
+  develop with confidence knowing that the foundation you build on will remain open in
+  perpetuity. It also means that _you_ can participate in the community make sure WDL is
+  as good as it can be! Join Slack or participate on GitHub to have your voice heard in
+  that process (see the [Contributing][contributing] section to learn more).
 
 WDL also maintains a list of other values that are adhered to when possible, but not at
 the cost of the top-level values above.
@@ -73,6 +74,7 @@ ensure you have the best possible experience:
 
 Happy workflowing 👋!
 
+[contributing]: ./getting-started/contributing.md
 [Nextflow]: https://nextflow.io 
 [Snakemake]: https://snakemake.readthedocs.io/en/stable
 [specification]: https://github.com/openwdl/wdl
