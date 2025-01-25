@@ -17,7 +17,7 @@ environments.
 
 The following are the top-level values of the project.
 
-- **Human readable and writable.** WDL aims to be readable and writable by a wide
+- **Human-readable and -writable.** WDL aims to be readable and writable by a wide
   variety of audiences, including software engineers, domain experts, and platform
   operators. To this end, the language prioritizes providing a concise, domain-specific
   grammar that expresses the majority of (but not all) workflows succinctly. This

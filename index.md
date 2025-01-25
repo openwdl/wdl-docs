@@ -16,7 +16,7 @@ hero:
 
 features:
   - icon: 🔎️
-    title: Human readable and writable
+    title: Human-readable and -writable
     details: >
       Designed to be written and understood by software engineers, domain experts,
       and platform operators.
