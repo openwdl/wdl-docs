@@ -31,8 +31,11 @@ workflow run {
     call stepA { input: in = file }
   }
 
-  # Collect the results and perform some joint operation (gather).
-  call stepB { input: files = files }
+  # Collect the results from the scatter (gather).
+  #
+  # Note that the outputs from `stepA` are automatically coerced
+  # into an `Array` that you can pass in elsewhere.
+  call stepB { input: files = stepA.output }
 }
 ```
 
