@@ -38,7 +38,12 @@ export default defineConfig({
     /**
      * Navbar.
      */
-    nav: [],
+    nav: [
+      {
+        text: "Specification",
+        link: "https://github.com/openwdl/wdl/blob/wdl-1.2/SPEC.md",
+      },
+    ],
 
     socialLinks: [
       {
