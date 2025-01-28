@@ -1,5 +1,5 @@
 <div style="align: center">
-  <img src="https://raw.githubusercontent.com/claymcleod/wdl-docs/refs/heads/main/.github/assets/readme-header.png">
+  <img src="https://raw.githubusercontent.com/openwdl/wdl-docs/refs/heads/main/.github/assets/readme-header.png">
 </div>
 
 <br />
@@ -32,7 +32,7 @@ pnpm run docs:build
 WDL only advances through community contributions. While participating in discussions
 and submitting issues are great ways to be involved, help is also needed to implement
 changes to the specification. For more information on how you can contribute, please
-read the [Contributing](CONTRIBUTING.md) guide.
+read the [Contributing] guide.
 
 ### License
 
@@ -43,3 +43,4 @@ License](./LICENSE).
 
 [join-slack]:
     https://join.slack.com/t/openwdl/shared_invite/zt-ctmj4mhf-cFBNxIiZYs6SY9HgM9UAVw
+[Contributing]: https://github.com/openwdl/governance/blob/main/CONTRIBUTING.md
