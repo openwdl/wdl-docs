@@ -1,5 +1,5 @@
 <div style="align: center">
-  <img src="https://raw.githubusercontent.com/openwdl/wdl-docs/refs/heads/main/.github/assets/readme-header.png">
+  <img src="https://raw.githubusercontent.com/openwdl/docs/refs/heads/main/.github/assets/readme-header.png">
 </div>
 
 <br />

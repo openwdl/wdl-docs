@@ -221,7 +221,7 @@ The following is an incomplete list of large WDL workflow repositories sorted by
 | [WARP] <br /> _Broad Institute_                                 | WARP stands for "WDL Research Analysis Pipelines" and contains cloud-optimized pipelines for processing biological data from the Broad Institute Data Sciences Platform.                                    |
 | [WILDS] <br /> _Fred Hutch_                                     | Official repositories of the Workflows for Integration of Large Data and Software (WILDS) developed at the Fred Hutch Data Science Lab.                                                                     |
 
-[create a pull request]: https://github.com/openwdl/wdl-docs/pulls
+[create a pull request]: https://github.com/openwdl/docs/pulls
 [BioWDL]: https://github.com/biowdl
 [Chan Zuckerberg]: https://github.com/chanzuckerberg/czid-workflows
 [Dockstore]:

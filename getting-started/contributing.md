@@ -21,7 +21,7 @@ important—things like typo fixes, updates to existing content, suggestions for
 documentation, and keeping the list of resources in the [Ecosystem](./ecosystem.md) page
 is incredibly helpful!
 
-[documentation]: https://github.com/openwdl/wdl-docs/
+[documentation]: https://github.com/openwdl/docs/
 [OpenWDL organization]: https://github.com/openwdl/
 [pull requests]: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request
 [RFC process]: https://github.com/openwdl/wdl/blob/wdl-1.2/RFC.md

@@ -24,7 +24,7 @@ export default defineConfig({
   appearance: "force-dark",
   base: "/",
   ignoreDeadLinks: ["./LICENSE"],
-  head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
+  head: [["link", { rel: "icon", href: "/favicon.ico" }]],
   themeConfig: {
     /**
      * Logo and site title.
@@ -50,7 +50,7 @@ export default defineConfig({
         icon: "slack",
         link: "https://join.slack.com/t/openwdl/shared_invite/zt-ctmj4mhf-cFBNxIiZYs6SY9HgM9UAVw",
       },
-      { icon: "github", link: "https://github.com/openwdl/wdl-docs" },
+      { icon: "github", link: "https://github.com/openwdl/docs" },
     ],
 
     search: {
@@ -89,11 +89,26 @@ export default defineConfig({
             text: "Linear chaining",
             link: "/design-patterns/linear-chaining/index.md",
           },
-          { text: "Multiple I/O", link: "/design-patterns/multiple-io/index.md" },
-          { text: "Branch and merge", link: "/design-patterns/branch-and-merge/index.md" },
-          { text: "Task aliasing", link: "/design-patterns/task-aliasing/index.md" },
-          { text: "Conditional statement", link: "/design-patterns/conditional-statement/index.md" },
-          { text: "Scatter-gather", link: "/design-patterns/scatter-gather/index.md" },
+          {
+            text: "Multiple I/O",
+            link: "/design-patterns/multiple-io/index.md",
+          },
+          {
+            text: "Branch and merge",
+            link: "/design-patterns/branch-and-merge/index.md",
+          },
+          {
+            text: "Task aliasing",
+            link: "/design-patterns/task-aliasing/index.md",
+          },
+          {
+            text: "Conditional statement",
+            link: "/design-patterns/conditional-statement/index.md",
+          },
+          {
+            text: "Scatter-gather",
+            link: "/design-patterns/scatter-gather/index.md",
+          },
         ],
       },
       {
@@ -101,7 +116,7 @@ export default defineConfig({
         items: [
           {
             text: "Upgrade guide",
-            link: "/reference/upgrade-guide"
+            link: "/reference/upgrade-guide",
           },
           {
             text: "Standard library",
@@ -128,9 +143,9 @@ export default defineConfig({
         items: [
           {
             text: "Cookbook",
-            link: "https://github.com/openwdl/cookbook"
-          }
-        ]
+            link: "https://github.com/openwdl/cookbook",
+          },
+        ],
       },
     ],
   },

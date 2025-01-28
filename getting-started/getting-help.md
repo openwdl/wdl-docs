@@ -44,7 +44,7 @@ from: be sure to check them out!
 
 [contributing-md]: https://github.com/openwdl/wdl/blob/wdl-1.2/CONTRIBUTING.md
 [Learn WDL guide]: https://github.com/openwdl/learn-wdl
-[official WDL documentation]: https://github.com/openwdl/wdl-docs
+[official WDL documentation]: https://github.com/openwdl/docs
 [official WDL template repository]: https://github.com/openwdl/workflow-template-wdl
 [slack-invite]: https://join.slack.com/t/openwdl/shared_invite/zt-ctmj4mhf-cFBNxIiZYs6SY9HgM9UAVw
 [WDL specification]: https://github.com/openwdl/wdl
