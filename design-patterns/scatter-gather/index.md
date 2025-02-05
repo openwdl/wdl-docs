@@ -35,7 +35,7 @@ workflow run {
   #
   # Note that the outputs from `stepA` are automatically coerced
   # into an `Array` that you can pass in elsewhere.
-  call stepB { input: files = stepA.output }
+  call stepB { input: files = stepA.out }
 }
 ```
 
