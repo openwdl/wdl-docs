@@ -147,6 +147,10 @@ export default defineConfig({
                 text: "File functions",
                 link: "/reference/stdlib/file",
               },
+              {
+                text: "String Array functions",
+                link: "/reference/stdlib/string-array",
+              },
             ],
             collapsed: true,
           },

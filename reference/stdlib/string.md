@@ -1,10 +1,10 @@
 # String Functions
 
-- [`find`](#find)
-- [`matches`](#matches)
+- [`find`](#find) <Badge type="tip" text="v1.2" />
+- [`matches`](#matches) <Badge type="tip" text="v1.2" />
 - [`sub`](#sub)
 
-## `find`
+## `find` <Badge type="tip" text="Requires WDL v1.2" />
 
 Given two `String` parameters `input` and `pattern`, searches for the occurrence of
 `pattern` within `input` and returns the first match or `None` if there are no matches.
@@ -42,7 +42,7 @@ String? match = find("Hello, world!", "e..o");
 # `match` now contains `ello`.
 ```
 
-## `matches`
+## `matches` <Badge type="tip" text="Requires WDL v1.2" />
 
 Given two `String` parameters `input` and `pattern`, tests whether `pattern` matches
 `input` at least once. `pattern` is a [regular

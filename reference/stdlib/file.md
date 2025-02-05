@@ -1,7 +1,7 @@
 # File Functions
 
 - [`basename`](#basename)
-- [`join_paths`](#join-paths)
+- [`join_paths`](#join-paths) <Badge type="tip" text="v1.2" />
 - [`glob`](#glob)
 - [`size`](#size)
 - [`stdout`](#stdout)
@@ -31,7 +31,6 @@ separator in the path.
 The optional second parameter specifies a literal suffix to remove from the file name.
 If the file name does not end with the specified suffix then it is ignored.
 
-
 **Signatures**
 
 ```wdl
@@ -60,7 +59,7 @@ String bn = basename("/path/to/file.txt", ".txt")
 # `bn` contains `"file"`.
 ```
 
-## `join_paths`
+## `join_paths` <Badge type="tip" text="Requires WDL v1.2" />
 
 Joins together two or more paths into an absolute path in the host filesystem.
 
