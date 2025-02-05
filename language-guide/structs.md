@@ -1,6 +1,6 @@
 # Structs
 
-**Structs** ([spec link][spec-structs]) represents custom types that you can define an
+**Structs** ([spec link][spec-structs]) represent custom types that you can define an
 pass around within WDL. Structs are comprised of _member_ fields that have a name and an
 associated type. The use of these custom types in more complex situations allows the
 execution engine to do validation on your behalf, ensuring that your task or workflow
