@@ -20,7 +20,8 @@ async function getGrammar() {
 
 export default defineConfig({
   title: "Workflow Description Language (WDL) Documentation",
-  description: "Guides for the Workflow Description Language (WDL).",
+  description:
+    "Guides and reference materials for the Workflow Description Language (WDL).",
   appearance: "force-dark",
   base: "/",
   ignoreDeadLinks: ["./LICENSE"],

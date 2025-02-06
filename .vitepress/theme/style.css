@@ -93,16 +93,16 @@
     line-height: 20px;
   }
 
-  .VPContent p {
-    line-height: 26px !important;
-  }
-
   .VPSidebarItem h2 {
     margin-bottom: 4px;
   }
 
   .content:not(code) {
     font-size: 17px;
+    line-height: 26px !important;
+  }
+
+  .details {
     line-height: 26px !important;
   }
 }
