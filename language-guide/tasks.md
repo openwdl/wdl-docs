@@ -9,10 +9,10 @@ Fundamentally, the represent a bash script that is intended to be run to accompl
 goal. You'll reach for tasks when defining each of the constituent analyses within a
 broader [workflow](./workflows.md).
 
-Tasks have a required ```command``` section and several optional sections for things
+Tasks have a required `command` section and several optional sections for things
 like defining inputs, defining outputs, documenting your task, and specifying runtime
 requirements. We'll cover each of these in detail here while leaving an exhaustive
-explanation to [the specification][spec-tasks]. 
+explanation to [the specification][spec-tasks].
 
 Below is a representative example of what a simple task might look like.
 
@@ -179,7 +179,7 @@ them when the need arises.
 
 [spec-tasks]: https://github.com/openwdl/wdl/blob/wdl-1.2/SPEC.md#task-definition
 [spec-task-inputs]: https://github.com/openwdl/wdl/blob/wdl-1.2/SPEC.md#task-inputs
-[spec-task-inputs]: https://github.com/openwdl/wdl/blob/wdl-1.2/SPEC.md#task-outputs
+[spec-task-outputs]: https://github.com/openwdl/wdl/blob/wdl-1.2/SPEC.md#task-outputs
 [spec-requirements]:
     https://github.com/openwdl/wdl/blob/wdl-1.2/SPEC.md#-requirements-section
 [spec-requirements-attributes]: https://github.com/openwdl/wdl/blob/wdl-1.2/SPEC.md#requirements-attributes

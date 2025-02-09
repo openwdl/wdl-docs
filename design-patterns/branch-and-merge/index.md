@@ -34,7 +34,7 @@ workflow run {
 
   # Run `stepD`, connecting the `in1` input to `stepB`'s `out` output
   # and the `in2` input to `stepC`'s `out` output.
-  call stepC { input: in1 = stepB.out, in2 = stepC.out }
+  call stepD { input: in1 = stepB.out, in2 = stepC.out }
 }
 ```
 
@@ -143,7 +143,7 @@ workflow run {
   # (b) The merge happens here.
   call merge_vcfs { input:
     snp_vcf = filter_snps.filtered_vcf,
-    indel_vcf = filter_snps.filtered_vcf,
+    indel_vcf = filter_indels.filtered_vcf,
   }
 
   output {
