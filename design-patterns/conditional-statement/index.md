@@ -4,7 +4,7 @@ It is often desirable to only execute some section of a computation graph only i
 particular condition holds. This could be as simple as a user input to the workflow
 indicating the "mode A" should be run instead of "mode B", whether to scatter and gather
 tasks rather than running a single multi-threaded task, or enabling an entire analysis
-based on if some analytical check passes a QC threshold. In these cases, you'll want to
+based on whether some analytical check passes a QC threshold. In these cases, you'll want to
 reach for **conditional statements** (also known as `if`/`else` statements).
 
 ![A diagram showing three tasks: `stepA`, `stepB`, and `stepC`. `stepA` is always
